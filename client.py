@@ -1,4 +1,6 @@
 import socket
+import sys
+
 
 HEADER = 64
 PORT = 5050
@@ -19,7 +21,4 @@ def send(msg):
     client.send(send_length)
     client.send(message)
 
-
-
-
-send('helllo world')
+send(sys.argv[1])
